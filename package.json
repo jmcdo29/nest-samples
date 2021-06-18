@@ -30,9 +30,12 @@
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/platform-ws": "^7.6.18",
+    "@nestjs/websockets": "^7.6.18",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "ws": "^7.5.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^7.0.0",
@@ -48,6 +51,7 @@
     "@nrwl/workspace": "12.4.0",
     "@types/jest": "26.0.8",
     "@types/node": "14.14.33",
+    "@types/ws": "^7.4.5",
     "@typescript-eslint/eslint-plugin": "4.19.0",
     "@typescript-eslint/parser": "4.19.0",
     "dotenv": "8.2.0",
