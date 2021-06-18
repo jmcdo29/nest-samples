@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "projects": {
+    "sockets-with-ws": {
+      "root": "apps/sockets-with-ws",
+      "sourceRoot": "apps/sockets-with-ws/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/sockets-with-ws",
+            "main": "apps/sockets-with-ws/src/main.ts",
+            "tsConfig": "apps/sockets-with-ws/tsconfig.app.json",
+            "assets": ["apps/sockets-with-ws/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/sockets-with-ws/src/environments/environment.ts",
+                  "with": "apps/sockets-with-ws/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "sockets-with-ws:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/sockets-with-ws/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/sockets-with-ws"],
+          "options": {
+            "jestConfig": "apps/sockets-with-ws/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/nest"
+  },
+  "defaultProject": "sockets-with-ws"
+}
