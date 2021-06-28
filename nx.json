@@ -14,19 +14,20 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
-        "accessToken":"",
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
   "projects": {
+    "bull-separate-apps-producer": {
+      "tags": []
+    },
+    "bull-separate-apps-consumer": {
+      "tags": []
+    },
     "sockets-with-ws": {
       "tags": []
     }
