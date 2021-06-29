@@ -28,6 +28,9 @@
     "bull-separate-apps-consumer": {
       "tags": []
     },
+    "nest-commander": {
+      "tags": []
+    },
     "sockets-with-ws": {
       "tags": []
     }
