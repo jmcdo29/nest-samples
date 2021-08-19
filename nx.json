@@ -22,16 +22,19 @@
     }
   },
   "projects": {
-    "bull-separate-apps-producer": {
+    "bull-separate-apps-consumer": {
       "tags": []
     },
-    "bull-separate-apps-consumer": {
+    "bull-separate-apps-producer": {
       "tags": []
     },
     "nest-commander": {
       "tags": []
     },
     "sockets-with-ws": {
+      "tags": []
+    },
+    "twitter-auth": {
       "tags": []
     }
   }

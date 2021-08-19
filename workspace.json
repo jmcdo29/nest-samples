@@ -1,64 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "bull-separate-apps-producer": {
-      "root": "apps/bull-separate-apps-producer",
-      "sourceRoot": "apps/bull-separate-apps-producer/src",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/apps/bull-separate-apps-producer",
-            "main": "apps/bull-separate-apps-producer/src/main.ts",
-            "tsConfig": "apps/bull-separate-apps-producer/tsconfig.app.json",
-            "assets": [
-              "apps/bull-separate-apps-producer/src/assets"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/bull-separate-apps-producer/src/environments/environment.ts",
-                  "with": "apps/bull-separate-apps-producer/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "bull-separate-apps-producer:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/bull-separate-apps-producer/**/*.ts"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/bull-separate-apps-producer"
-          ],
-          "options": {
-            "jestConfig": "apps/bull-separate-apps-producer/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "bull-separate-apps-consumer": {
       "root": "apps/bull-separate-apps-consumer",
       "sourceRoot": "apps/bull-separate-apps-consumer/src",
@@ -112,6 +54,64 @@
           ],
           "options": {
             "jestConfig": "apps/bull-separate-apps-consumer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bull-separate-apps-producer": {
+      "root": "apps/bull-separate-apps-producer",
+      "sourceRoot": "apps/bull-separate-apps-producer/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/bull-separate-apps-producer",
+            "main": "apps/bull-separate-apps-producer/src/main.ts",
+            "tsConfig": "apps/bull-separate-apps-producer/tsconfig.app.json",
+            "assets": [
+              "apps/bull-separate-apps-producer/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/bull-separate-apps-producer/src/environments/environment.ts",
+                  "with": "apps/bull-separate-apps-producer/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "bull-separate-apps-producer:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/bull-separate-apps-producer/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/bull-separate-apps-producer"
+          ],
+          "options": {
+            "jestConfig": "apps/bull-separate-apps-producer/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -228,6 +228,64 @@
           ],
           "options": {
             "jestConfig": "apps/sockets-with-ws/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "twitter-auth": {
+      "root": "apps/twitter-auth",
+      "sourceRoot": "apps/twitter-auth/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/twitter-auth",
+            "main": "apps/twitter-auth/src/main.ts",
+            "tsConfig": "apps/twitter-auth/tsconfig.app.json",
+            "assets": [
+              "apps/twitter-auth/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/twitter-auth/src/environments/environment.ts",
+                  "with": "apps/twitter-auth/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "twitter-auth:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/twitter-auth/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/twitter-auth"
+          ],
+          "options": {
+            "jestConfig": "apps/twitter-auth/jest.config.js",
             "passWithNoTests": true
           }
         }
