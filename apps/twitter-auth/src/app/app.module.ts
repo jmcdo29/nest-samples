@@ -5,8 +5,9 @@ import { CookieSerializer } from './passport/passport-serializer';
 import { TwitterStrategy } from './passport/twitter/twitter.strategy';
 
 @Module({
-  imports: [CookieSerializer], // Must include cookie serializer
-  controllers: [AppController, TwitterStrategy], // Must include twitter strategy
+  imports: [],
+  // You MUST include cookie serializer, and TwitterStrategy
+  controllers: [AppController, TwitterStrategy, CookieSerializer],
   providers: [AppService],
 })
 export class AppModule {}

@@ -35,7 +35,10 @@ export class TwitterStrategy extends PassportStrategy(Strategy) {
       email: profile.emails?.shift().value,
       photo: profile.photos?.shift().value,
     };
-    return Promise.resolve(twitterUser);
+
+    // Here, the twitterUser object is sent to the passport-serializer
+    // You may store the user here, for example:
     // return await User.findOrCreate({ twitterId: profile.id }).exec();
+    return Promise.resolve(twitterUser);
   }
 }

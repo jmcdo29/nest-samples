@@ -24,9 +24,8 @@ async function bootstrap() {
   );
   app.use(initialize());
   app.use(session());
-  await app.listen(port, () => {
-    Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
-  });
+  await app.listen(port);
+  Logger.log(`Listening at ${await app.getUrl()}`);
 }
 
 bootstrap();

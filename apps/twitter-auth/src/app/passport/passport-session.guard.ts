@@ -10,7 +10,7 @@ export class PassportSessionGuard implements CanActivate {
     const request = httpContext.getRequest();
 
     try {
-      if (request.session.passport.user) {
+      if (request.isAuthenticated()) {
         return true;
       }
     } catch (e) {
