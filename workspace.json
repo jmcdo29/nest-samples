@@ -1,64 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "bull-separate-apps-producer": {
-      "root": "apps/bull-separate-apps-producer",
-      "sourceRoot": "apps/bull-separate-apps-producer/src",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/apps/bull-separate-apps-producer",
-            "main": "apps/bull-separate-apps-producer/src/main.ts",
-            "tsConfig": "apps/bull-separate-apps-producer/tsconfig.app.json",
-            "assets": [
-              "apps/bull-separate-apps-producer/src/assets"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/bull-separate-apps-producer/src/environments/environment.ts",
-                  "with": "apps/bull-separate-apps-producer/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "bull-separate-apps-producer:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/bull-separate-apps-producer/**/*.ts"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/bull-separate-apps-producer"
-          ],
-          "options": {
-            "jestConfig": "apps/bull-separate-apps-producer/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "bull-separate-apps-consumer": {
       "root": "apps/bull-separate-apps-consumer",
       "sourceRoot": "apps/bull-separate-apps-consumer/src",
@@ -66,16 +8,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/bull-separate-apps-consumer",
             "main": "apps/bull-separate-apps-consumer/src/main.ts",
             "tsConfig": "apps/bull-separate-apps-consumer/tsconfig.app.json",
-            "assets": [
-              "apps/bull-separate-apps-consumer/src/assets"
-            ]
+            "assets": ["apps/bull-separate-apps-consumer/src/assets"]
           },
           "configurations": {
             "production": {
@@ -100,22 +38,124 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/bull-separate-apps-consumer/**/*.ts"
-            ]
-          }
+            "lintFilePatterns": ["apps/bull-separate-apps-consumer/**/*.ts"]
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/bull-separate-apps-consumer"
-          ],
+          "outputs": ["coverage/apps/bull-separate-apps-consumer"],
           "options": {
             "jestConfig": "apps/bull-separate-apps-consumer/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
+    },
+    "bull-separate-apps-producer": {
+      "root": "apps/bull-separate-apps-producer",
+      "sourceRoot": "apps/bull-separate-apps-producer/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/bull-separate-apps-producer",
+            "main": "apps/bull-separate-apps-producer/src/main.ts",
+            "tsConfig": "apps/bull-separate-apps-producer/tsconfig.app.json",
+            "assets": ["apps/bull-separate-apps-producer/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/bull-separate-apps-producer/src/environments/environment.ts",
+                  "with": "apps/bull-separate-apps-producer/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "bull-separate-apps-producer:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/bull-separate-apps-producer/**/*.ts"]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/bull-separate-apps-producer"],
+          "options": {
+            "jestConfig": "apps/bull-separate-apps-producer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "form-data-guard": {
+      "root": "apps/form-data-guard",
+      "sourceRoot": "apps/form-data-guard/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/form-data-guard",
+            "main": "apps/form-data-guard/src/main.ts",
+            "tsConfig": "apps/form-data-guard/tsconfig.app.json",
+            "assets": ["apps/form-data-guard/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/form-data-guard/src/environments/environment.ts",
+                  "with": "apps/form-data-guard/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "form-data-guard:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/form-data-guard/**/*.ts"]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/form-data-guard"],
+          "options": {
+            "jestConfig": "apps/form-data-guard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
     },
     "nest-commander": {
       "root": "apps/nest-commander",
@@ -124,16 +164,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/nest-commander",
             "main": "apps/nest-commander/src/main.ts",
             "tsConfig": "apps/nest-commander/tsconfig.app.json",
-            "assets": [
-              "apps/nest-commander/src/assets"
-            ]
+            "assets": ["apps/nest-commander/src/assets"]
           },
           "configurations": {
             "production": {
@@ -158,22 +194,20 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/nest-commander/**/*.ts"
-            ]
-          }
+            "lintFilePatterns": ["apps/nest-commander/**/*.ts"]
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/nest-commander"
-          ],
+          "outputs": ["coverage/apps/nest-commander"],
           "options": {
             "jestConfig": "apps/nest-commander/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "sockets-with-ws": {
       "root": "apps/sockets-with-ws",
@@ -182,16 +216,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/sockets-with-ws",
             "main": "apps/sockets-with-ws/src/main.ts",
             "tsConfig": "apps/sockets-with-ws/tsconfig.app.json",
-            "assets": [
-              "apps/sockets-with-ws/src/assets"
-            ]
+            "assets": ["apps/sockets-with-ws/src/assets"]
           },
           "configurations": {
             "production": {
@@ -216,26 +246,20 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/sockets-with-ws/**/*.ts"
-            ]
-          }
+            "lintFilePatterns": ["apps/sockets-with-ws/**/*.ts"]
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/sockets-with-ws"
-          ],
+          "outputs": ["coverage/apps/sockets-with-ws"],
           "options": {
             "jestConfig": "apps/sockets-with-ws/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/nest"
-  },
-  "defaultProject": "sockets-with-ws"
+  }
 }
