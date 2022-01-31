@@ -1,8 +1,3 @@
-module.exports = {
-  projects: [
-    '<rootDir>/apps/sockets-with-ws',
-    '<rootDir>/apps/bull-separate-apps-producer',
-    '<rootDir>/apps/bull-separate-apps-consumer',
-    '<rootDir>/apps/nest-commander'
-  ],
-};
+const { getJestProjects } = require('@nrwl/jest');
+
+module.exports = { projects: getJestProjects() };

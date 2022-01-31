@@ -17,22 +17,21 @@
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "",
         "canTrackAnalytics": false,
-        "showUsageWarnings": true
+        "showUsageWarnings": true,
+        "parallel": 1
       }
     }
   },
-  "projects": {
-    "bull-separate-apps-producer": {
-      "tags": []
-    },
-    "bull-separate-apps-consumer": {
-      "tags": []
-    },
-    "nest-commander": {
-      "tags": []
-    },
-    "sockets-with-ws": {
-      "tags": []
-    }
-  }
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/nest"
+  },
+  "defaultProject": "sockets-with-ws"
 }
