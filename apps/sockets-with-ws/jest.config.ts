@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'bull-separate-apps-consumer',
+/* eslint-disable */
+export default {
+  displayName: 'sockets-with-ws',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/bull-separate-apps-consumer',
+  coverageDirectory: '../../coverage/apps/sockets-with-ws',
 };

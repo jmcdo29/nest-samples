@@ -2,12 +2,13 @@
   "version": 2,
   "projects": {
     "bull-separate-apps-consumer": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/bull-separate-apps-consumer",
       "sourceRoot": "apps/bull-separate-apps-consumer/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/bull-separate-apps-consumer",
@@ -30,7 +31,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "bull-separate-apps-consumer:build"
           }
@@ -46,7 +47,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/bull-separate-apps-consumer"],
           "options": {
-            "jestConfig": "apps/bull-separate-apps-consumer/jest.config.js",
+            "jestConfig": "apps/bull-separate-apps-consumer/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -54,12 +55,13 @@
       "tags": []
     },
     "bull-separate-apps-producer": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/bull-separate-apps-producer",
       "sourceRoot": "apps/bull-separate-apps-producer/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/bull-separate-apps-producer",
@@ -82,7 +84,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "bull-separate-apps-producer:build"
           }
@@ -98,7 +100,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/bull-separate-apps-producer"],
           "options": {
-            "jestConfig": "apps/bull-separate-apps-producer/jest.config.js",
+            "jestConfig": "apps/bull-separate-apps-producer/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -106,12 +108,13 @@
       "tags": []
     },
     "form-data-guard": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/form-data-guard",
       "sourceRoot": "apps/form-data-guard/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/form-data-guard",
@@ -134,7 +137,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "form-data-guard:build"
           }
@@ -150,7 +153,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/form-data-guard"],
           "options": {
-            "jestConfig": "apps/form-data-guard/jest.config.js",
+            "jestConfig": "apps/form-data-guard/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -158,12 +161,13 @@
       "tags": []
     },
     "graphql-file-upload": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/graphql-file-upload",
       "sourceRoot": "apps/graphql-file-upload/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/graphql-file-upload",
@@ -186,7 +190,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "graphql-file-upload:build"
           }
@@ -202,7 +206,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/graphql-file-upload"],
           "options": {
-            "jestConfig": "apps/graphql-file-upload/jest.config.js",
+            "jestConfig": "apps/graphql-file-upload/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -210,12 +214,13 @@
       "tags": []
     },
     "nest-commander": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/nest-commander",
       "sourceRoot": "apps/nest-commander/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/nest-commander",
@@ -238,7 +243,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "nest-commander:build"
           }
@@ -254,7 +259,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/nest-commander"],
           "options": {
-            "jestConfig": "apps/nest-commander/jest.config.js",
+            "jestConfig": "apps/nest-commander/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -262,12 +267,13 @@
       "tags": []
     },
     "sockets-with-ws": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/sockets-with-ws",
       "sourceRoot": "apps/sockets-with-ws/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/sockets-with-ws",
@@ -290,7 +296,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "sockets-with-ws:build"
           }
@@ -306,12 +312,13 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/sockets-with-ws"],
           "options": {
-            "jestConfig": "apps/sockets-with-ws/jest.config.js",
+            "jestConfig": "apps/sockets-with-ws/jest.config.ts",
             "passWithNoTests": true
           }
         }
       },
       "tags": []
     }
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

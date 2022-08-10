@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'nest-commander',
   preset: '../../jest.preset.js',
   globals: {
