@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'nest-commander',
   preset: '../../jest.preset.js',
