@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'bull-separate-apps-consumer',
   preset: '../../jest.preset.js',

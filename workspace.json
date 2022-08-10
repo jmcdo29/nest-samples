@@ -267,6 +267,7 @@
       "tags": []
     },
     "socket-subject": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/socket-subject",
       "sourceRoot": "apps/socket-subject/src",
       "projectType": "application",
@@ -311,7 +312,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/socket-subject"],
           "options": {
-            "jestConfig": "apps/socket-subject/jest.config.js",
+            "jestConfig": "apps/socket-subject/jest.config.ts",
             "passWithNoTests": true
           }
         }

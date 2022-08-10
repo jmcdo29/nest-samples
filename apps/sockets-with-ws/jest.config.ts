@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'sockets-with-ws',
   preset: '../../jest.preset.js',

@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'graphql-file-upload',
   preset: '../../jest.preset.js',
