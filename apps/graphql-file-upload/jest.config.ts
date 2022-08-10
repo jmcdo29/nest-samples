@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'bull-separate-apps',
+/* eslint-disable */
+export default {
+  displayName: 'graphql-file-upload',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/bull-separate-apps',
+  coverageDirectory: '../../coverage/apps/graphql-file-upload',
 };

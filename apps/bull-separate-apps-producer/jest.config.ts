@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'form-data-guard',
+/* eslint-disable */
+export default {
+  displayName: 'bull-separate-apps',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/form-data-guard',
+  coverageDirectory: '../../coverage/apps/bull-separate-apps',
 };
