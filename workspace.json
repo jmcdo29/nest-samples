@@ -1,6 +1,63 @@
 {
   "version": 2,
   "projects": {
+    "basic-auth": {
+      "root": "apps/basic-auth",
+      "sourceRoot": "apps/basic-auth/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:webpack",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/basic-auth",
+            "main": "apps/basic-auth/src/main.ts",
+            "tsConfig": "apps/basic-auth/tsconfig.app.json",
+            "assets": ["apps/basic-auth/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/basic-auth/src/environments/environment.ts",
+                  "with": "apps/basic-auth/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:node",
+          "options": {
+            "buildTarget": "basic-auth:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "basic-auth:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/basic-auth/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/basic-auth"],
+          "options": {
+            "jestConfig": "apps/basic-auth/jest.config.ts",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "bull-separate-apps-consumer": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/bull-separate-apps-consumer",
